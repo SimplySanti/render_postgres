@@ -61,7 +61,7 @@
     "binode": "latest",
     "c8": "latest",
     "cross-env": "latest",
-    "cypress": "^12.14.0",
+    "cypress": "latest",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "happy-dom": "latest",
