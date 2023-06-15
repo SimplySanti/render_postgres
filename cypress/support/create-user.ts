@@ -5,7 +5,7 @@
 // as that new user.
 
 import { parse } from "cookie";
-import { installGlobals } from "@remix-run/node/globals";
+import { installGlobals } from "@remix-run/node/dist/globals";
 import { createUserSession } from "~/session.server";
 import { createUser } from "~/models/user.server";
 
@@ -22,7 +22,7 @@ async function createAndLogin(email: string) {
   const user = await createUser(email, "myreallystrongpassword");
 
   const response = await createUserSession({
-    request: new Request(""),
+    request: new Request("http://localhost:3000"),
     userId: user.id,
     remember: false,
     redirectTo: "/",
